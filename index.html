@@ -3,20 +3,49 @@
     <head>
         <meta charset ="UTF-8">
         <meta name ="viewport" content ="device-width" initial-scale ="1.0">
-        <title>MY Resume
+        <title>MY Portfolio
         </title>
+        <style>
+            body{
+                background-color: beige;
+                padding:1%;
+                border-radius: 0%;
+                border-style: double;
+                border-color:black;
+            }
+            #head{
+                color:red;
+                font-style: italic;
+                font-family: 'Times New Roman';
+            }
+            .heading{
+                color: blue;
+                background-color: black;
+            }
+            #head1{
+                color:red;
+                font-style: italic;
+                font-family: 'Times New Roman';
+                font-size: 30px;
+            }
+        </style>
+          </head>
+
         <body>
+            
             <center>
-            <h1 allign="center">Sriharish S</h1>
-            <h3 allign="center">Software Developer</h3>
+            <marquee id ="head1" ><b>Welcome to my portfolio</b></marquee>
             
             </center>
-            <h2>EXECUTIVE SUMMARY:</h2>
+            <h1 allign="center" id ="head">Sriharish S</h1>
+            <h3 allign="center" id="head">Software Developer</h3>
+            <img src="Sriharish.jpeg" height="300px" width="200px" >
+            <h2 class="heading">EXECUTIVE SUMMARY:</h2>
             <p>Software Developer with hands-on experience in full-stack web development and application design. Proficient in Java,
 Python, JavaScript, and the MERN stack, with knowledge of REST APIs, database management, and basic cybersecurity.
 Strong problem-solving skills with a focus on building scalable, secure, and efficient software solutions.
 </p>
-<h2>EDUCATION:</h2>
+<h2 class="heading">EDUCATION:</h2>
 <list>
             <ul>
                 <b>S.A.ENGINEERING COLLEGE - B.TECH INFORMATION TECHNOLOGY CGPA-8.61</b> (2023 - 2027)<br></ul>
@@ -24,7 +53,7 @@ Strong problem-solving skills with a focus on building scalable, secure, and eff
                 <ul><b>NARAYANA E-TECHNO SCHOOL - 12th CGPA-64.8</b> (2022 - 2023)</ul>
 
 </list>
-<h2>SKILLS:</h2>
+<h2 class="heading">SKILLS:</h2>
 <list>
             <ol><li><b>PROGRAMMING LANGUAGES: </b>Python, Java, C, JavaScript<br></li>
 
@@ -33,7 +62,7 @@ Strong problem-solving skills with a focus on building scalable, secure, and eff
 <li><b>UI/UX DESIGN: </b>Figma, Wireframing, Prototyping<br></li>
 <li><b>DEVELOPMENT TOOLS:</b> Git, GitHub, VS Code, Postman</ol></li>
 </list>
-<h2>CERTIFICATIONS:</h2>
+<h2 class="heading">CERTIFICATIONS:</h2>
 <list>
             <ol>
                 <li><b>AWS ACADEMY CLOUD FOUNDATIONS </b><br></li>
@@ -42,7 +71,7 @@ Strong problem-solving skills with a focus on building scalable, secure, and eff
 
             </ol>
 </list>
-<h2>PROJECTS :</h2>
+<h2 class="heading">PROJECTS :</h2>
 <list>
             <ol>
 
@@ -58,7 +87,7 @@ Designed a network monitoring system using Random Forest and Isolation Forest fo
 identification.<br></li>
 <li><b>DATABASE MANAGEMENT:</b> SQL, MongoDB<br></li>
 </ol>
-<h2>PROFESSIONAL EXPERIENCE</h2>
+<h2 class="heading">PROFESSIONAL EXPERIENCE</h2>
 <list>
             <ol>
 
@@ -76,8 +105,63 @@ identification.<br></li>
 <li><b>DATABASE MANAGEMENT:</b> SQL, MongoDB<br></li>
 
 </list>
+<h2>Counter:<span id="count">0</span></h2>
+<h2 >a=9,b=2 Answer:<span id="operations"> </span></h2>
+
+<button onclick="increase()" >Increment+</button>
+<button onclick="decrease()" >Decrement-</button>
+<button onclick="reset()" >Reset</button><br>
+<button id="add" >Addition</button>
+<button id="sub" >Subtraction</button>
+<button id="mult" >Multiplication</button>
+<button id="div" >Division</button>
+<script>
+    let count=0;
+    let a=9;
+    let b=2;
+    let btn= document.getElementById("add");
+
+    let btn1= document.getElementById("sub");
+    let btn2= document.getElementById("mult");
+    let btn3= document.getElementById("div");
+  
+    
+
+    function increase(){
+        count++;
+        document.getElementById("count").innerText=count;
+    }
+    function decrease(){
+        count--;
+        document.getElementById("count").innerText=count;
+    }
+    function reset(){
+        count=0;
+        document.getElementById("count").innerText=count;
+        document.getElementById("operations").innerText=count;
+    }
+    function add(){
+        ans=a+b;
+        document.getElementById("operations").innerText=ans;
+    }
+        btn.addEventListener("click",add);
+     function sub(){
+        ans=a-b;
+        document.getElementById("operations").innerText=ans;
+    }  btn1.addEventListener("click",sub);
+     function mult(){
+        ans=a*b;
+        document.getElementById("operations").innerText=ans;
+    }  btn2.addEventListener("click",mult);
+    function div(){
+        ans=a/b;
+        document.getElementById("operations").innerText=ans;
+    }  btn3.addEventListener("click",div);
+
+</script>
+
             
         </body>
 
-    </head>
+  
 </html>
