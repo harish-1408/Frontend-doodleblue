@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lange="en">
+<html lang="en">
     <head>
         <meta charset ="UTF-8">
-        <meta name ="viewport" content ="device-width" initial-scale ="1.0">
+        <meta name ="viewport" content ="width-device-width" initial-scale ="1.0">
         <title>MY Portfolio
         </title>
         <style>
             body{
-                background-color: beige;
+                background-color: #f4f1ea;
                 padding:1%;
                 border-radius: 0%;
                 border-style: double;
@@ -19,15 +19,23 @@
                 font-family: 'Times New Roman';
             }
             .heading{
-                color: blue;
-                background-color: black;
+                color: #fff;
+                background-color: #8b0000;
             }
             #head1{
-                color:red;
+                color:#b22222;
                 font-style: italic;
                 font-family: 'Times New Roman';
                 font-size: 30px;
             }
+            button {
+                background-color: #8b0000;
+                color: white;
+                border: none;
+                padding: 8px 14px;
+                margin: 4px 2px;
+                border-radius: 4px;
+    }
         </style>
           </head>
 
@@ -46,68 +54,35 @@ Python, JavaScript, and the MERN stack, with knowledge of REST APIs, database ma
 Strong problem-solving skills with a focus on building scalable, secure, and efficient software solutions.
 </p>
 <h2 class="heading">EDUCATION:</h2>
-<list>
-            <ul>
-                <b>S.A.ENGINEERING COLLEGE - B.TECH INFORMATION TECHNOLOGY CGPA-8.61</b> (2023 - 2027)<br></ul>
+                <div id="edu">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>School Name</th>
+                <th>Course Name</th>
+                <th>Year of Completion</th>
+            </tr>
+        </thead>
 
-                <ul><b>NARAYANA E-TECHNO SCHOOL - 12th CGPA-64.8</b> (2022 - 2023)</ul>
-
-</list>
+        <tbody id="education"></tbody>
+    </table>
+</div>
 <h2 class="heading">SKILLS:</h2>
-<list>
-            <ol><li><b>PROGRAMMING LANGUAGES: </b>Python, Java, C, JavaScript<br></li>
-
-<li><b>WEB DEVELOPMENT: </b>HTML, CSS, React.js, Node.js, Express.js, Flask<br></li>
-<li><b>DATABASE MANAGEMENT:</b> SQL, MongoDB<br></li>
-<li><b>UI/UX DESIGN: </b>Figma, Wireframing, Prototyping<br></li>
-<li><b>DEVELOPMENT TOOLS:</b> Git, GitHub, VS Code, Postman</ol></li>
-</list>
+<ul id="skills"></ul>
 <h2 class="heading">CERTIFICATIONS:</h2>
-<list>
-            <ol>
-                <li><b>AWS ACADEMY CLOUD FOUNDATIONS </b><br></li>
-
-<li><b>PYTHON WITH MONGODB  </b><br></li>
-
-            </ol>
-</list>
+<ul id="certf"></ul>
 <h2 class="heading">PROJECTS :</h2>
-<list>
-            <ol>
-
-<li><b>NEXIFY AI – Multi-Agent AI Productivity Platform:</b>
-Developing an AI platform for research, coding, and workflow automation with secure authentication and device
-integration.<br></li>
-<li><b>
-Clinic Management System:</b>
-Developed a web application for patient registration, appointments, prescriptions, and billing with database
-integration.<br></li>
-<li><b>Hybrid Intrusion Detection System:</b>
-Designed a network monitoring system using Random Forest and Isolation Forest for anomaly detection and threat
-identification.<br></li>
-<li><b>DATABASE MANAGEMENT:</b> SQL, MongoDB<br></li>
-</ol>
+<ul id="projects"></ul>
 <h2 class="heading">PROFESSIONAL EXPERIENCE</h2>
-<list>
-            <ol>
-
-<li><b>Full Stack Development Intern | Acutix Soft LLP | </b>
-Developing an AI platform for research, coding, and workflow automation with secure authentication and device
-integration.<br></li>
-<li><b>
-Founder / Lead | Nexify Technologies
-</b>
-Developed a web application for patient registration, appointments, prescriptions, and billing with database
-integration.<br></li>
-<li><b>Hybrid Intrusion Detection System:</b>
-Designed a network monitoring system using Random Forest and Isolation Forest for anomaly detection and threat
-identification.<br></li>
-<li><b>DATABASE MANAGEMENT:</b> SQL, MongoDB<br></li>
-
-</list>
+<ul id="profexp"></ul>
+<h2 class="heading">CONTACT</h2>
+<p>Email:<a id="email" href="#"></a></p>
+<p>Github:<a id="git" href="#"></a></p>
+<p>LinkedIN:<a id="linkedin" href="#"></a></p>
 <h2>Counter:<span id="count">0</span></h2>
+<button onclick="resume()">View Resume</button>
 <h2 >a=9,b=2 Answer:<span id="operations"> </span></h2>
-
 <button onclick="increase()" >Increment+</button>
 <button onclick="decrease()" >Decrement-</button>
 <button onclick="reset()" >Reset</button><br>
@@ -115,6 +90,8 @@ identification.<br></li>
 <button id="sub" >Subtraction</button>
 <button id="mult" >Multiplication</button>
 <button id="div" >Division</button>
+<p id="result">Hello</p>
+<button onclick="change()">Click Me</button>
 <script>
     let count=0;
     let a=9;
@@ -157,11 +134,138 @@ identification.<br></li>
         ans=a/b;
         document.getElementById("operations").innerText=ans;
     }  btn3.addEventListener("click",div);
-
-</script>
+    function change() {
+    document.getElementById("result").innerHTML = "<b>Vijay</b>";
+    }
+    function resume() { 
+        window.open("resume.pdf", "_blank"); }
+    const userData={
+        education:[
+            {
+                sno:1,
+                schoolname:"Narayana e-techno school",
+                coursename:"12th",
+                year:2023
+            },
+            {
+                sno:2,
+                schoolname:"SAEC",
+                coursename:"B.Tech IT",
+                year:2027
+            }
+        ],
+        skills:[
+            "HTML",
+            "CSS",
+            "JAVASCRIPT",
+            "Postman",
+            "Python",
+            "Expressjs",
+            "Angularjs",
+            "MongoDB",
+            "SQL",
+            "Nodejs",
+            "Nextjs"
+        ],
+        certifications:[ 
+            "Full Stack Development - Doodle Blue",
+            "AWS Academy Cloud Foundations - AWS Academy", 
+            "Python with MongoDB", 
+            "Programming in Java - NPTEL",
+            "Introduction to Cybersecurity - Cisco",
+            "UI/UX Design" 
+        ],
+        projects:[{
+            name:"Nexify AI-Agentic AI",
+            description:"Developing a Ai platform for workflow automation"
+        },
+        {
+            name:"Clinic management system",
+            description:"Developed a web application for hospital management"
+        },
+        { 
+            name: "Hybrid Intrusion Detection System", 
+            description: "Designed a network monitoring and intrusion detection system using Random Forest and Isolation Forest." 
+        }, 
+        { 
+            name: "SR Gym and Fitness Centre Website", 
+            description: "Developed a gym management website with administrative features, membership tracking, and payment receipt generation." 
+        } ],
+        profexp:[ 
+            { 
+                role: "Full Stack Development Intern", 
+                company: "VIPS.Tech",
+                duration: "June 2026 - July 2026", 
+                description: "Built an AI Interview Platform featuring authentication, resume analysis, and automated interview evaluation." 
+            }, 
+            { 
+                role: "Full Stack Development Intern", 
+                company: "Acutix Soft LLP", 
+                duration: "January 2026 - June 2026", 
+                description: "Developed a Clinic Management System with patient registration, appointment scheduling, prescriptions, billing, and database integration." 
+            }, 
+            { 
+                role: "Founder / Lead", 
+                company: "Nexify Technologies", 
+                duration: "Ongoing", 
+                description: "Leading web and application development projects, UI/UX design, and technology solutions." 
+            } ],
+            contact:
+            { 
+                email: "sriharish1408@gmail.com", 
+                github: "https://github.com/harish-1408", 
+                linkedin: "https://www.linkedin.com/in/sriharish-s-/" 
+            } };
+        function getEducation(){
+            return userData.education.map(user =>
+                `<tr>
+                    <td>${user.sno}</td>
+                    <td>${user.schoolname}</td>
+                    <td>${user.coursename}</td>
+                    <td>${user.year}</td>
+                    </tr>
+                    `).join("");
 
             
+        }
+        document.getElementById("education").innerHTML=getEducation();
+        function getSkills(){
+            return userData.skills.map(skill=>
+                `<li>${skill}</li>`).join("");
+            
+        }
+        document.getElementById("skills").innerHTML=getSkills();
+        function getCertifications(){
+            return userData.certifications.map(cert => `
+            <li>${cert}</li>`).join("");
+        }
+        document.getElementById("certf").innerHTML=getCertifications();
+        function getProjects(){
+            return userData.projects.map(project =>`
+            <li>
+                <b>${project.name}</b>
+                <p>${project.description}</p>
+                </li>`).join("");
+        }
+        document.getElementById("projects").innerHTML=getProjects();
+        function getExperience() { 
+            return userData.profexp.map(exp => `
+            <li>
+            <b>${exp.role}</b> - ${exp.company} 
+            <br> 
+            <b>Duration:</b> ${exp.duration} 
+            <p>${exp.description}</p> 
+            </li> `).join(""); 
+        } 
+        document.getElementById("profexp").innerHTML = getExperience();
+        document.getElementById("email").innerText = userData.contact.email; 
+        document.getElementById("email").href = "mailto:" + userData.contact.email;
+        document.getElementById("git").innerText = "GitHub Profile"; 
+        document.getElementById("git").href = userData.contact.github; 
+        document.getElementById("git").target = "_blank"; 
+        document.getElementById("linkedin").innerText = "LinkedIn Profile"; 
+        document.getElementById("linkedin").href = userData.contact.linkedin; 
+        document.getElementById("linkedin").target = "_blank";
+</script>
         </body>
-
-  
 </html>
